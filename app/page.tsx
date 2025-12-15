@@ -132,6 +132,34 @@ export default function HomePage() {
           No sign-up required. No data collection. Just powerful tools that work instantly in your browser.
         </p>
       </div>
+
+      {/* SEO Content Section */}
+      <div className="mt-16 prose dark:prose-invert max-w-none">
+        <h2>Free Developer Tools for Every Developer</h2>
+        <p>
+          DevToolbox provides a comprehensive collection of free, privacy-focused developer utilities that work entirely in your browser.
+          Whether you are formatting JSON, testing regular expressions, encoding Base64, or decoding JWT tokens, our tools are designed
+          to help you work faster and more efficiently.
+        </p>
+
+        <h3>Why Choose DevToolbox?</h3>
+        <ul>
+          <li><strong>100% Free:</strong> All tools are completely free with no hidden costs or premium tiers</li>
+          <li><strong>Privacy First:</strong> All processing happens locally in your browser - your data never touches our servers</li>
+          <li><strong>No Registration:</strong> Start using tools immediately without creating an account</li>
+          <li><strong>Works Offline:</strong> Once loaded, tools work even without an internet connection</li>
+          <li><strong>Fast and Lightweight:</strong> Instant processing with no server delays</li>
+          <li><strong>Modern Interface:</strong> Clean, intuitive design with dark mode support</li>
+        </ul>
+
+        <h3>Popular Developer Tools</h3>
+        <p>
+          Our most popular tools include the <Link href="/tools/json-formatter" className="text-blue-500 hover:underline">JSON Formatter</Link> for
+          validating and beautifying JSON data, the <Link href="/tools/regex-tester" className="text-blue-500 hover:underline">Regex Tester</Link> for
+          testing regular expressions, and the <Link href="/tools/jwt-decoder" className="text-blue-500 hover:underline">JWT Decoder</Link> for
+          inspecting JSON Web Tokens.
+        </p>
+      </div>
     </div>
   );
 }

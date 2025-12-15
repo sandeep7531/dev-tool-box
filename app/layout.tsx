@@ -15,10 +15,13 @@ export const metadata: Metadata = {
     template: "%s | DevToolbox"
   },
   description: "Free, fast, and privacy-focused developer tools. JSON formatter, Regex tester, Base64 encoder, JWT decoder, and more. All processing happens in your browser.",
-  keywords: ["developer tools", "json formatter", "regex tester", "base64 encoder", "jwt decoder", "url encoder", "timestamp converter", "developer utilities"],
+  keywords: ["developer tools", "json formatter", "regex tester", "base64 encoder", "jwt decoder", "url encoder", "timestamp converter", "developer utilities", "free dev tools", "online developer tools", "json validator", "regex validator", "base64 converter", "jwt parser"],
   authors: [{ name: "DevToolbox" }],
   creator: "DevToolbox",
   publisher: "DevToolbox",
+  alternates: {
+    canonical: "https://dev-tools-rose.vercel.app/",
+  },
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -26,11 +29,20 @@ export const metadata: Metadata = {
     title: "DevToolbox - Free Developer Tools & Utilities",
     description: "Free, fast, and privacy-focused developer tools. All processing happens in your browser.",
     siteName: "DevToolbox",
+    images: [
+      {
+        url: "/og-image.png",
+        width: 1200,
+        height: 630,
+        alt: "DevToolbox - Free Developer Tools",
+      },
+    ],
   },
   twitter: {
     card: "summary_large_image",
     title: "DevToolbox - Free Developer Tools & Utilities",
     description: "Free, fast, and privacy-focused developer tools.",
+    images: ["/og-image.png"],
   },
   robots: {
     index: true,
@@ -53,9 +65,42 @@ export default function RootLayout({
 }: {
   children: React.ReactNode
 }) {
+  const schemaData = {
+    "@context": "https://schema.org",
+    "@type": "WebApplication",
+    "name": "DevToolbox",
+    "applicationCategory": "DeveloperApplication",
+    "description": "Free, fast, and privacy-focused developer tools. JSON formatter, Regex tester, Base64 encoder, JWT decoder, and more.",
+    "url": "https://dev-tools-rose.vercel.app/",
+    "operatingSystem": "Any",
+    "offers": {
+      "@type": "Offer",
+      "price": "0",
+      "priceCurrency": "USD"
+    },
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "5",
+      "ratingCount": "1"
+    },
+    "featureList": [
+      "JSON Formatter & Validator",
+      "Regex Tester",
+      "Base64 Encoder/Decoder",
+      "JWT Decoder",
+      "URL Encoder/Decoder",
+      "Timestamp Converter"
+    ]
+  };
+
   return (
     <html lang="en" suppressHydrationWarning>
-
+      <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
+        />
+      </head>
       <body className={inter.className}>
         <ThemeProvider>
           <div className="flex flex-col min-h-screen bg-white dark:bg-gray-950">

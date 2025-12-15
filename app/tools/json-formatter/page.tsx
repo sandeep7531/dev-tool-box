@@ -4,7 +4,10 @@ import { JSONFormatter } from "@/components/tools/JSONFormatter";
 export const metadata: Metadata = {
   title: "JSON Formatter & Validator - Free Online Tool",
   description: "Format, validate, and beautify JSON with syntax highlighting. Free, fast, and works offline. No sign-up required. All processing happens in your browser.",
-  keywords: ["json formatter", "json validator", "json beautifier", "json viewer", "json pretty print", "json minify"],
+  keywords: ["json formatter", "json validator", "json beautifier", "json viewer", "json pretty print", "json minify", "json parser", "json online"],
+  alternates: {
+    canonical: "https://dev-tools-rose.vercel.app/tools/json-formatter",
+  },
   openGraph: {
     title: "JSON Formatter & Validator - DevToolbox",
     description: "Format, validate, and beautify JSON with syntax highlighting",

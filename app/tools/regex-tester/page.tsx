@@ -4,7 +4,10 @@ import { RegexTester } from "@/components/tools/RegexTester";
 export const metadata: Metadata = {
   title: "Regex Tester & Validator - Test Regular Expressions Online",
   description: "Test regular expressions with real-time matching, explanations, and common patterns. Free regex tester with syntax highlighting.",
-  keywords: ["regex tester", "regular expression", "regex validator", "regex matcher", "regex tool", "pattern matching"],
+  keywords: ["regex tester", "regular expression", "regex validator", "regex matcher", "regex tool", "pattern matching", "regex online"],
+  alternates: {
+    canonical: "https://dev-tools-rose.vercel.app/tools/regex-tester",
+  },
   openGraph: {
     title: "Regex Tester - DevToolbox",
     description: "Test regular expressions with real-time matching and explanations",
