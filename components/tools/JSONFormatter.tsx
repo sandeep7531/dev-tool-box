@@ -112,8 +112,9 @@ export function JSONFormatter() {
         </div>
 
         <div className="flex items-center gap-2">
-          <label className="text-sm text-gray-600 dark:text-gray-400">Indent:</label>
+          <label htmlFor="indent-select" className="text-sm text-gray-600 dark:text-gray-400">Indent:</label>
           <select
+            id="indent-select"
             value={indentSize}
             onChange={(e) => setIndentSize(Number(e.target.value))}
             className="px-3 py-2 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 text-sm"

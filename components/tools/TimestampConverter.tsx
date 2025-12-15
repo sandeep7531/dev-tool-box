@@ -138,6 +138,7 @@ export function TimestampConverter() {
               type="datetime-local"
               value={datetime.replace(" ", "T")}
               onChange={(e) => handleDatetimeChange(e.target.value.replace("T", " "))}
+              placeholder="Select date and time..."
               className="w-full px-4 py-3 border border-gray-300 dark:border-gray-700 rounded-lg bg-white dark:bg-gray-800 outline-none focus:ring-2 focus:ring-blue-500"
             />
           </div>
