@@ -108,6 +108,11 @@ export default function RootLayout({
       <head>
         <meta name="google-site-verification" content="LxuOQEkcgspypMsiFZi_lvCcVqPbLASfiZtkUY5DAHk" />
         <script
+          async
+          src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-3282210684438133"
+          crossOrigin="anonymous"
+        />
+        <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schemaData) }}
         />
